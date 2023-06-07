@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta content="text/html; charset=utf-8">
+      <title>ProtechGuard </title>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="" name="keywords">
+      <meta content="" name="description">
+      <!-- Favicon -->
+
+      <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+        <!-- Icon Font Stylesheet -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+      <!-- Libraries Stylesheet -->
+      <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+      <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+      <!-- Customized Bootstrap Stylesheet -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Template Stylesheet -->
+      <link href="css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="container-fluid position-relative d-flex p-0">
+         <!-- Spinner Start -->
+         <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+               <span class="sr-only">Loading...</span>
+            </div>
+         </div>
+         <!-- Spinner End -->
+         <!-- Sidebar Start -->
+         <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-secondary navbar-dark">
+               <a href="index.html" class="navbar-brand mx-4 mb-3">
+                  <h3 class="text-primary"><i class="fas fa-shield-alt me-2"></i>ProtechGuard</h3>
+               </a>
+               <div class="d-flex align-items-center ms-4 mb-4">
+               </div>
+               <div class="navbar-nav w-100">
+                  <a href="index.html" class="nav-item nav-link">
+                  <i class="fas fa-chart-line me-2"></i>Dashboard
+                  </a>
+                  <a href="subdomain.php" class="nav-item nav-link"><i class="fas fa-binoculars me-0"></i>Subdomain Hunter</a>
+                    <a href="port.php" class="nav-item nav-link"><i class="fas fa-network-wired me-2"></i>PortShield</a>
+                    <a href="scan.php" class="nav-item nav-link"><i class="fas fa-user-secret me-2"></i>CyberScan</a>
+                    <a href="QueryGuard.html" class="nav-item nav-link active"><i class="fas fa-search me-2"></i>QueryGuard</a>
+                    <a href="email.php" class="nav-item nav-link"><i class="fas fa-envelope me-2"></i>SecurEmailShield</a>
+               </div>
+            </nav>
+         </div>
+         <!-- Sidebar End -->
+         <!-- Content Start -->
+         <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+               <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                  <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+               </a>
+               <a href="#" class="sidebar-toggler flex-shrink-0">
+               <i class="fa fa-bars"></i>
+               </a>
+               <div class="navbar-nav align-items-center ms-auto">
+                  <div class="nav-item dropdown">
+                     <a href="signin.php" class="dropdown-item">Log Out</a>
+                  </div>
+               </div>
+            </nav>
+            <!-- Navbar End -->
+            <!-- Chart Start -->
+            <div class="container-fluid pt-4 px-4">
+               <div class="row g-4">
+                  <div class="bg-secondary rounded h-100 p-4">
+                     <h3 class="mb-4">QueryGuard</h3>
+                     <style>
+                        body {
+                        color:#FFF;
+                        font-size: 14pt;
+                        font-family:"Merienda One";
+                        font-weight: bold;
+                        padding: 0px;
+                        }
+                        * {
+                        box-sizing: border-box;
+                        }
+                        .column {
+                        float: left;
+                        width: 50%;
+                        padding: 10px;
+                        }
+                        @media screen and (max-width: 600px) {
+                        .column {
+                        width: 100%;
+                        }
+                        }
+                        .row {
+                        padding: 30px;
+                        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+                        }
+                        .row:after {
+                        content: "";
+                        display: table;
+                        clear: both;
+                        }
+                        a:hover {
+                        color:#DA4932;
+                        }
+                        hr {border: 2;width: 50%;}
+                        input{
+                        overflow: hidden;
+                        color:#FFF;
+                        background: transparent;
+                        border-radius:5px;
+                        -moz-border-radius:5px;
+                        -webkit-border-radius:5px;
+                        border: 1px solid;
+                        font-family:Arial,sans-serif;
+                        font-size:16px;
+                        font-weight:700;
+                        height:32px;
+                        padding:4px 16px;
+                        }
+                     </style>
+                     </head>
+                     <body>
+                        <script>
+                           function check_submit(e) {
+                               if (e && e.keyCode == 13 && e.target.type != 'textarea') {
+                                   e.preventDefault();
+                                   e.defaultPrevented = true;
+                           
+                                   if($('#tool-form').valid() == true) {
+                                       if ($('#security-check').is(':visible') == true) {
+                                           document.getElementById('tool-form').submit();
+                                   }
+                               }
+                           }
+                           }
+                        </script>
+                        <div id="particles-js">
+                           <div onkeypress="check_submit(event)">
+                              <form novalidate="novalidate" onsubmit="return false" id="tool-form" role="form" method="GET" action="/" target="response-frame">
+                                 <input name="p" value="tool" type="hidden">
+                                 <input name="t" value="10" type="hidden">
+                                 <input name="act" value="exec" type="hidden">
+                                 <script>
+                                    document.getElementById('tool-form').setAttribute('onsubmit', 'return false');
+                                    check_submit = function(event) {};
+                                 </script>
+                                 <script>
+                                    function google_it(type) 
+                                    {
+                                        if($('#tool-form').valid() == false) {
+                                            return;
+                                        }
+                                        
+                                        site = document.getElementById('target').value;
+                                        if (site.indexOf('://') > 0) {
+                                            site = site.substr(site.indexOf('://')+3);
+                                        }                            
+                                        url = 'https://www.google.com/search?q=';
+                                        url += 'site:' + site;
+                                    
+                                    switch(type)
+                                    {
+                                        case 1:
+                                            url += '+intitle:index.of';
+                                            break;
+                                        case 2:
+                                            url += '+ext:xml+|+ext:conf+|+ext:cnf+|+ext:reg+|+ext:inf+|+ext:rdp+|+ext:cfg+|+ext:txt+|+ext:ora+|+ext:ini';
+                                            break;
+                                        case 3:
+                                            url += '+ext:sql+|+ext:dbf+|+ext:mdb';
+                                            break;
+                                        case 4:
+                                            url += '+ext:log';
+                                            break;
+                                        case 5:
+                                            url += '+ext:bkf+|+ext:bkp+|+ext:bak+|+ext:old+|+ext:backup';
+                                            break;
+                                        case 6:
+                                            url += '+inurl:login';
+                                            break;
+                                        case 7:
+                                            url += '+intext:"sql+syntax+near"+|+intext:"syntax+error+has+occurred"+|+intext:"incorrect+syntax+near"+|+intext:"unexpected+end+of+SQL+command"+|+intext:"Warning:+mysql_connect()"+|+intext:"Warning:+mysql_query()"+|+intext:"Warning:+pg_connect()"';
+                                            break;
+                                        case 8:
+                                            url += '+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv';
+                                            break;
+                                        case 9:
+                                            url += '+ext:php+intitle:phpinfo+"published+by+the+PHP+Group"';
+                                            break;
+                                        case 10:
+                                            url += '+inurl:wp-+|+inurl:wp-content+|+inurl:plugins+|+inurl:uploads+|+inurl:themes+|+inurl:download';
+                                            break;
+                                        case 11:
+                                            url += '+inurl:shell+|+inurl:backdoor+|+inurl:wso+|+inurl:cmd+|+shadow+|+passwd+|+boot.ini+|+inurl:backdoor';
+                                            break;
+                                        case 12:
+                                            url += '+inurl:readme+|+inurl:license+|+inurl:install+|+inurl:setup+|+inurl:config';
+                                            break;
+                                        case 13:
+                                            url += '+inurl:redir+|+inurl:url+|+inurl:redirect+|+inurl:return+|+inurl:src=http+|+inurl:r=http';
+                                            break;
+                                        case 14:
+                                            url += '+ext:action+|+ext:struts+|+ext:do';
+                                            break;
+                                        case 15:
+                                            url = 'https://www.google.com/search?q=site:pastebin.com+' + site;
+                                            break;
+                                        case 16:
+                                            url = 'https://www.google.com/search?q=site:linkedin.com+employees+' + site;
+                                            break;
+                                        case 17:
+                                            url += '+inurl:"/phpinfo.php"+|+inurl:".htaccess"+|+inurl:"/.git"+' + site + ' -github';
+                                            break;
+                                        case 18:
+                                            url = 'https://www.google.com/search?q=site:*.' + site;
+                                            break;
+                                        case 19:
+                                            url = 'https://www.google.com/search?q=site:*.*.' + site;
+                                            break;
+                                        case 20:
+                                            url += '+inurl:wp-content+|+inurl:wp-includes';
+                                            break;
+                                        case 21:
+                                            url =  'https://github.com/search?q="*.' + site +'"&type=host';
+                                            break;
+                                        case 22:
+                                            url =  'http://' + site + '/crossdomain.xml';
+                                            break; 
+                                        case 23:
+                                            url =  'http://threatcrowd.org/domain.php?domain=' + site;
+                                            break; 
+                                        case 24:
+                                            url = 'https://www.google.com/search?q=+inurl:' + site + '+ext:swf';
+                                            break;
+                                        case 25:
+                                            url = 'https://yandex.com/search/?text=site:' + site + '%20mime:swf';
+                                            break;
+                                        case 26:
+                                            url =  'https://web.archive.org/cdx/search?url=' + site + '/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=urlkey:.*swf&limit=100000&_=1507209148310';
+                                            break;
+                                        case 27:
+                                            url =  'https://web.archive.org/cdx/search?url=' + site + '/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=mimetype:application/x-shockwave-flash&limit=100000&_=1507209148310';
+                                            break;
+                                        case 28:
+                                            url =  'https://web.archive.org/web/*/(.' + site + ')';
+                                        case 29:
+                                            url =  'https://web.archive.org/web/*/' + site + '/*';
+                                            break; 
+                                        case 30:
+                                            url =  'https://crt.sh/?q=%25.' + site;
+                                            break; 
+                                        case 31:
+                                            url =  'https://www.openbugbounty.org/search/?search=' + site +'&type=host';
+                                            break;
+                                        case 32:
+                                            url =  'https://www.reddit.com/search/?q=' + site +'&source=recent';
+                                            break; 
+                                        case 33:
+                                            url =  'http://wwwb-dedup.us.archive.org:8083/cdx/search?url=' + site + '/&matchType=domain&collapse=digest&output=text&fl=original,timestamp&filter=urlkey:.*wp[-].*&limit=1000000&xx=';
+                                            break;
+                                        case 34:
+                                            url =  'https://censys.io/ipv4?q=' + site;
+                                            break;
+                                        case 35:
+                                            url =  'https://censys.io/domain?q=' + site;
+                                            break; 
+                                        case 36:
+                                            url =  'https://censys.io/certificates?q=' + site;
+                                            break;
+                                        case 37:
+                                            url =  'https://www.shodan.io/search?query=' + site;
+                                            break;
+                                    }
+                                        window.open(url);
+                                    
+                                    }
+                                 </script>
+                                 <div style="text-align: center;"><b>Target Domain:</b>
+                                    <input id="target" name="target" placeholder="site.com" autofocus="" type="text"><br/>
+                                 </div>
+                                 <div class="row">
+                                    <div class="column">
+                                       <div style="text-align: center;">
+                                          <div style="display: inline-block; text-align: left;">
+                                             &#128269; <a href="#" onclick="google_it(1)">Directory listing vulnerabilities</a><br/>  
+                                             &#128269; <a href="#" onclick="google_it(2)">Exposed Configuration files</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(3)">Exposed Database files</a><br/> 
+                                             &#128269; <a href="#" onclick="google_it(10)">Find WordPress</a><br/>   
+                                             &#128269; <a href="#" onclick="google_it(4)">Exposed log files</a><br/> 
+                                             &#128269; <a href="#" onclick="google_it(5)">Backup and old files</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(6)">Login pages</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(7)">SQL errors</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(8)">Publicly exposed documents</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(9)">phpinfo()</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(11)">Finding Backdoors</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(12)">Install / Setup files</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(13)">Open Redirects</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(14)">Apache STRUTS RCE</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(15)">Find Pastebin entries</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(16)">Employees on LINKEDIN</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(17)">.htaccess sensitive files</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(18)">Find Subdomains</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(19)">Find Sub-Subdomains</a><br/>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="column">
+                                       <div style="text-align: center;">
+                                          <div style="display: inline-block; text-align: left;">
+                                             &#128269; <a href="#" onclick="google_it(20)">Find WordPress #2</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(33)">Find WordPress [Wayback Machine]</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(21)">Search in GITHUB</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(31)">Search in OpenBugBounty</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(32)">Search in Reddit</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(22)">Test CrossDomain</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(23)">Check in ThreatCrowd</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(24)">Find .SWF file (Google)</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(25)">Find .SWF file (Yandex)</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(26)">Search SWF in WayBack Machine</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(27)">Search in WayBack Machine #2</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(28)">Search in WayBack Machine #3</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(29)">Search in WayBack Machine [List/All]</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(30)">Check in crt.sh</a><br/>
+                                             &#128269; <a href="#" onclick="google_it(37)">Search in SHODAN</a><br/>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                           </div>
+                        </div>
+                        </form>
+                        <script src="a.js"></script><script src="b.js"></script>
+                        <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
+                        <canvas id="doughnut-chart"></canvas>
+                  </div>
+               </div>
+            </div>
+            <!-- Chart End -->
+         </div>
+         <!-- Content End -->
+         <!-- Back to Top -->
+         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+      </div>
+      <script src="js/main.js"></script>
+   </body>
+</html>
